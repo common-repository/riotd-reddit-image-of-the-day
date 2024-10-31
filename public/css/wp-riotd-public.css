@@ -1,0 +1,202 @@
+/**
+ * The CSS Styles used for the public facing area.
+ *
+ * @link       https://github.com/tommasodargenio/wp-riotd/public/css/wp-riotd-public.css
+ * @since      1.0.0
+ * 
+ * @package    RIOTD
+ * @subpackage RIOTD/public
+ * @author     Tommaso D'Argenio <dev@tommasodargenio.com>
+ *  
+ */
+
+ :root {
+    --reddit-color-orangered: #ff4500;
+    --reddit-color-beluga: #fff;
+    --reddit-color-dugong: #f2f6f7;
+    --reddit-color-dolphin: #d7dfe2;
+    --reddit-color-seal: #b8c7cc;
+    --reddit-color-narwhal: #7a9299;
+    --reddit-color-orca: #1b2426;
+ }
+
+#reddit-iotd {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border: thin silver solid;
+    text-align: center;
+}
+
+#reddit-iotd-title-header {
+    background-color: antiquewhite;
+}
+
+#reddit-iotd-title {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#reddit-iotd-subtitle { 
+    font-size: medium;
+    font-weight: lighter;
+    font-style: italic;
+}
+#reddit-iotd-full-size {
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    width: 90vw;
+    height: 90vh;
+    padding: 1%;
+    margin-right: -50%; 
+    
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+
+    /* Add the blur and shadow effect */
+    backdrop-filter: blur(8px);
+    /* Safari compatibility line */
+    -webkit-backdrop-filter:  blur(8px);
+    /* Shadow */
+    box-shadow: 0 0 24px 10px rgba(0,0,0,.25);
+}
+
+#reddit-iotd-close-button, #reddit-iotd-link-button{
+    text-align: right;       
+    color: #f1f1f1;    
+    top: 0%;
+    right: 0%;
+}
+#reddit-iotd-close-button span:hover, #reddit-iotd-link-button span:hover{
+    color: #000;    
+}
+
+#ig-main {
+    width: 100%;
+}
+ 
+#ig-iotd {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+    width: 300px;    
+}
+
+#ig-iotd-full {
+    width: auto;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    position: absolute;    
+}
+
+#ig-title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+    font-style: italic;
+    font-size: smaller;
+}
+
+/**
+* REDDIT Branding Style
+*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+.reddit-branding {
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 5px;
+    background-color: var(--reddit-color-beluga);
+    padding: 5px;
+    border: 5px solid var(--reddit-color-dugong);
+    border-radius: 10px;
+    max-width: 500px;
+    font-size: 0.7em;
+  }
+  .reddit-branding .post_title {
+      grid-column: 1/-1;
+      display:grid;
+      margin:auto;
+      font-size: 1.5em;
+      
+  }
+  .reddit-branding .bottom_row {
+      padding: 10px;
+  }
+  .reddit-branding .post_image {
+  grid-column: 1/-1;
+  display:grid;
+  margin:auto;
+  max-width: 500px;
+  }
+  .reddit-branding .post_image img {
+      max-width: 480px;
+  }
+
+  .reddit-branding .reddit_logo {
+    display:grid;    
+    align-self: center;
+    justify-self: right;
+}
+.reddit-branding .reddit_logo img {
+    height: 42px; 
+    width: 42px;
+
+}
+
+.reddit-branding .channel_thumbnail img {
+    height: 42px;
+    width: 42px;
+    border-radius: 100%;
+    justify-self: left;
+    align-self: center;
+}
+.reddit-branding .channel_name {    
+    grid-column: 2 / span 2;    
+    align-self: center;
+}
+.reddit-branding .author {
+    grid-column: 4 / span 2;    
+    align-self: center;
+}
+.reddit-branding .comments {
+    color: var(--reddit-color-narwhal);
+    font-weight:bold;
+    grid-column: 3 / span 2;
+    display: flex;
+    justify-self: left;
+    align-items: center;
+}
+  .reddit-branding .upvotes {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-self: left;
+  align-items: flex-end;
+  color: var(--reddit-color-orangered);
+  font-weight:bold;
+  }
+
+  .reddit-branding .post_date {
+      grid-column: 5 / span 2;
+      display: flex;      
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+  .reddit-branding > div {
+    background-color: rgba(255, 255, 255, 0.8);    
+  }
+  .reddit-branding .bold {
+      font-weight:600;
+  }
+  .reddit-branding .regular {
+      font-weight:400;
+      color: var(--reddit-color-narwhal);
+  }
